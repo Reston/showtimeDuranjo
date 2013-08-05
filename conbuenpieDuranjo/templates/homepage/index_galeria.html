@@ -1,0 +1,47 @@
+{% load endless %}
+{% load staticfiles %}
+{% paginate imagenes %}
+<div class="imagenGrande">
+	<div id="slider" class="flexslider">
+		<ul class="slides">
+			{% for img in imagenes %}
+				<li><img src="{{ MEDIA_URL }}/{{ img.imagen }}" alt="{{img.titulo}} imagen"></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<div id="carousel" class="flexslider">
+	<ul class="slides">
+		{% for imagen in imagenes %}
+			<li>
+				<a href="{{ imagen.imagen.url }}">
+				<img class="foto" src="{{ MEDIA_URL }}/{{ imagen.imagen }}" alt="{{imagen.titulo}} imagen">
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+<div class="pagination">{% show_pages %}</div>
+<!-- GALERIA SCRIPT -->
+	<script>
+		$(document).ready(function() {
+		 // The slider being synced must be initialized first
+		  $('#carousel').flexslider({
+		    animation: "slide",
+		    controlNav: false,
+		    animationLoop: false,
+		    slideshow: false,
+		    itemWidth: 150,
+		    itemMargin: 5,
+		    asNavFor: '#slider'
+		  });
+		   
+		  $('#slider').flexslider({
+		    animation: "fade",
+		    controlNav: false,
+		    animationLoop: false,
+		    slideshow: false,
+		    sync: "#carousel"
+		  });
+	});
+	</script>
