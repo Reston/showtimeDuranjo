@@ -1,4 +1,4 @@
-conbuenpieDuranjo
+Show Time DURANJO
 =================
 
 Página de showtime
