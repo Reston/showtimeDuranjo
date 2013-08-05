@@ -53,7 +53,6 @@ Con Buen Pie - Inicio
 					bajo la producción de Marco Villalobos. Una hora divertida y amena ¡Para personas como tu! 
 					Escuchanos de lunes a viernes a las 10 de la mañana.</p>
 				<div class="logoblanco"></div>
-				<div class="pajaritos"></div>
 			</div>
 			<div class="galeria">		
 					<div class="endless_page_template">
@@ -62,97 +61,6 @@ Con Buen Pie - Inicio
 							<script>$.endlessPaginate();</script>
 					</div>
 			</div>	
-		</div>
-	</section>
-<!--  CONTACTO -->
-	<section id="contacto" class="infoContacto">
-		<div class="cercaBlanca"></div>
-		<div class="contacto">
-			<div class="wrapper">
-				<h2 class="titulo"><div class="mataCosita2"></div>Contacto</h2>
-				<div class="sectionContacto">
-					<div class="opcionInfo">
-						<div class="tituloOpcionInfo">Correo:</div>
-						<div class="infoOpcion">
-							contacto@conbuenpie.com.ve
-						</div>
-					</div>
-					<div class="opcionInfo">
-						<div class="tituloOpcionInfo">Twitter:</div>
-						<div class="infoOpcion">
-							<a href="https://twitter.com/conbuenpiemcbo"
-							 class="twitter-follow-button" data-show-count="true" data-lang="en">Seguir a @conbuenpiemcbo</a>
-						</div>
-					</div>
-					<div class="opcionInfo ">
-						<div class="tituloOpcionInfo">Facebook:</div>
-						<div class="infoOpcion">
-							<div class="fb-like" data-href="http://facebook.com/conbuenpiemcbo" 
-							data-width="300" data-layout="button_count" data-show-faces="true" data-send="true"></div>
-						</div>
-					</div>
-					<div class="opcionInfo ">
-						<div class="tituloOpcionInfo">Google+:</div>
-						<div class="infoOpcion">
-							<!-- Place this tag where you want the badge to render. -->
-							<div class="g-plus" data-width="300" data-href="//plus.google.com/101327765584320539080" data-rel="publisher"></div>
-							<!-- Place this tag after the last badge tag. -->
-							<script type="text/javascript">
-							  window.___gcfg = {lang: 'es-419'};
-
-							  (function() {
-							    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-							    po.src = 'https://apis.google.com/js/plusone.js';
-							    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-							  })();
-							</script>
-						</div>
-					</div>
-				</div>
-				{% if success %}
-				<div class="mensajeenviado">
-					<div class="enviado">Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.</div>
-					<img class="sobre" src="{{ STATIC_URL }}img/sobre.png" alt="formulario de contacto">	
-				</div>
-				{% else %}
-				<form action="#" method="POST">
-					<div class="tituloContacto">Formulario:</div>
-					<div class="sectionContacto">						
-						{% csrf_token %}
-						<div class="campo">
-							{{ field.errors }}
-							<label for="nombre">Nombre:</label>
-							{{ form.nombre }}
-							{{ form.nombre.errors }}
-						</div>
-						<div class="campo">				
-							{{ field.errors }}
-							<label for="email">Correo Electrónico:</label>
-							{{ form.email }}
-							{{ form.email.errors }}
-						</div>
-						<div class="campo">
-							{{ field.errors }}
-							<label for="telefono">Teléfono:</label>
-							{{ form.telefono }}
-							{{ form.telefono.errors }}
-						</div>
-					</div>
-					<div class="sectionContacto">
-						<div class="mataCosita3"></div>
-						<div class="textareaDescripcion campo">
-						{{ field.errors }}
-						<label for="texto">Mensaje: </label>
-						{{ form.texto }}
-						{{ form.texto.errors }}
-						</div>
-						<div class="botonEnviar">
-							<input type="submit">
-						</div>
-					</div>
-				</form>
-			{% endif %}
-			</div>
 		</div>
 	</section>
 	<!-- GALERIA SCRIPT -->
