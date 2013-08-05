@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="Página oficial de Show Time programa de radio emitido en la emisora Feria 106.9 FM de Lunes a Viernes de 10 AM a  11 AM">
+{% endblock%}
+{% block title %}
+Show Time - Radio
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{% static 'css/homepage/radio.css' %}">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/adquiridos/back-top.js"></script>
+<script src="{% static 'js/propios/menuByScroll.js' %}"></script>
+<script src="{% static 'js/propios/toChangeImage.js' %}"></script>
+<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+{% endblock %}
+{% block navi %}
+<div class="wrapper">
+			<div class="logo">
+				<img src="{% static 'img/logoshowtime.png' %}" alt="Logo de Con Buen Pie">
+			</div>
+	</div>
+<nav class="barraNavegacion">
+		<ul>
+			<li id="homeMenu" class="index"><a href="{% url 'homepageindex' %}">Inicio</a></li>
+			<li id="transmisionMenu" class="services"><a href="#transmision">Transmisión</a></li>
+			<li id="galeriaMenu" class="services"><a href="#galeria">Galería</a></li>
+		</ul>
+</nav>			
+{% endblock %}
+{% block clear %}{% endblock%}
+{% block contenido %}
+<!--  GRAMA -->
+	<section class="grama">
+		<div class="rayagris"></div>
+		<div class="wrapper">
+			<div class="presentadores"></div>
+			<div class="tituloPrincipal">
+				<h1>Escuchanos por Feria 106.9 FM</h1>
+			</div>
+		</div>
+	</section>
+	<section id="transmision" class="transmision">
+		<div class="wrapper">
+			<p>En vivo de Lunes a Viernes de 10:00 AM a 11:00 AM.</p>
+			<div class="reproducto">
+				<iframe width="850" height="500" src="http://www.ustream.tv/embed/4706359?v=3&amp;wmode=direct" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>
+			</div>
+		</div>
+	</section>
+<!--  GALERIA -->
+	<section id="galeria" class="aboutus">
+		<div class="wrapper">
+			<div class="info">
+				<h2 class="titulo"><div class="mataCosita"></div>Sinopsis</h2>
+				<p>Programa de radio transmitido por Feria 106.9 FM conducido por Yonna Cabrera y Samir Shker, 
+					bajo la producción de Marco Villalobos. Una hora divertida y amena ¡Para personas como tu! 
+					Escuchanos de lunes a viernes a las 10 de la mañana.</p>
+			</div>
+			<div class="galeria">		
+					<div class="endless_page_template">
+							{% include page_template %}
+							<script src="{{ STATIC_URL }}endless_pagination/js/endless-pagination.js"></script>
+							<script>$.endlessPaginate();</script>
+					</div>
+			</div>	
+		</div>
+	</section>
+	<!-- GALERIA SCRIPT -->
+	<script>
+		$(window).load(function() {
+		  $('.flexslider').flexslider({
+		    animation: "fade"
+		  });
+		});
+	</script>
+	<!-- Google+ SCRIPT --> 
+		<!-- Place this tag after the last badge tag. -->
+		<script  async type="text/javascript">
+		 window.___gcfg = {lang: 'es-419'};
+		 (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		   po.src = 'https://apis.google.com/js/plusone.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+	<!-- FACEBOOK SCRIPT -->
+	<div id="fb-root"></div>
+		<script async>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- TWITTER SCRIPT -->
+	<script async>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
+	<!-- BACK TOP BOX -->
+	<div id="back-top" class="back-top">
+		<a href="#home"><span>↑</span>Regresar arriba</a>
+	</div>
+{% endblock%}
+{% block footer %}
+<div class="wrapper">
+			<p class="fraseFooter">En vivo de Lunes a Viernes de 10:00 AM a 11:00 AM.</p>
+			<div class="footer-der">
+				<div class="logoblanco"></div>
+				Copyright © 2013, Todos los derechos reservados.
+			</div>
+			<div class="footer-med">
+				<ul class="listaMenuFooter">
+					<li class="index"><a href="#">Inicio</a></li>
+					<li class="services"><a href="#galeria">Galería</a></li>
+					<li class="contact"><a href="#contacto">Contacto</a></li>
+				</ul>
+
+			</div>
+			<div class="footer-izq">
+				Diseño y Desarrollo por:
+				<div class="logoDuranjo">
+					<a href="http://duranjo.com/">
+						<img src="{% static 'img/duranjowhite.png' %}" alt="Duranjo Web C.A. Logo">
+					</a>
+				</div>
+			</div>		  
+		</div>
+{% endblock %}

@@ -1,0 +1,145 @@
+@charset 'utf-8';
+/* ==  Contacto == */
+.infoContacto{color: white}
+.cercaBlanca{
+	background: url(../img/cerca.png);
+	width: 100%;
+	height: 102px;
+	border-bottom: 10px solid #C9D8C9;
+}
+.contacto{
+	background: url(../img/texturacontacto.jpg);
+	padding: 50px 0;
+
+}
+.contacto > .wrapper{
+	position: relative;
+}
+.contacto .titulo{
+	margin: 0;
+}
+.sectionContacto{
+	position: relative;
+	vertical-align: top;
+	display: inline-block;
+	width: 33%;
+}
+form .sectionContacto{
+	width: 49%;
+}
+.sectionContacto, form{
+	margin-top: 30px;
+}
+.mataCosita2{
+	position: absolute;
+	top: -60px;
+	left: -30px;
+	background: url(../img/cositas.png) 119px 0;
+	width: 75px;
+	height: 80px;
+	z-index: 1;
+}
+form{
+	width: 66%;
+	display: inline-block;
+}
+/* FORM CONTACTO CSS*/
+.tituloContacto{
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+.campo{
+	margin: 0 auto 10px auto;
+}
+
+.campo input{
+	background: #E6E7E7;
+	border: 1px solid #CCCCCC;
+	text-indent: 5px;
+	height: 33px;
+	width: 84%;
+}
+.campo input, textarea{
+	border-radius: 10px;
+}
+.campo label{
+	float: left;
+	width: 350px;
+	margin-bottom: 3px;
+}
+textarea{
+	background: #E6E7E7;
+	border: 1px solid #CCCCCC;
+	width: 84%;
+}
+.errorlist{
+	border: 1px solid #F00;
+	background: #FFC0CB;
+	color: #F00;
+	list-style: none;
+	margin: 10px 0;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	width: 82%;
+	text-shadow: 0px 1px rgba(255, 255, 255, 0.5);
+	padding: 10px 0 10px 2%;
+}
+.enviado{
+	border: 1px solid #008000;
+	background: lightgreen;
+	color: #008000;
+	margin: 10px 0;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	width: 82%;
+	text-shadow: 0px 1px rgba(255, 255, 255, 0.5);
+	padding: 10px 0 10px 2%;
+}
+input[type="submit"]{
+	margin-top: 10px;
+	background: #3F8F25;
+	padding: 5px 20px;
+	border: none;
+	color: whitesmoke;
+	text-transform: uppercase;
+}
+/* end form contacto css*/
+
+.infoContacto{
+	padding-top: 30px;
+}
+.cajaIzquierda, .cajaDerecha{
+	width: 60%;
+	margin: 0 auto 0 auto;
+}
+.tituloOpcionInfo{
+	background: #3F8F25;
+	box-shadow: 3px 3px 1px #000;
+	font-size: 1.2em;
+	width: 85%;
+	text-indent: 15px;
+	font-weight: bold;
+	padding: 5px 0;
+}
+.infoOpcion{
+	text-align: left;
+	font-size: 1.2em;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.telefonosNumeros{
+	list-style: none;
+	margin:0;
+}
+.infoDerecha{
+	display: inline-block;
+	width: 49.55%;
+}
+.infoIzquierda{
+	vertical-align: top;
+	display: inline-block;
+	width: 49.55%;
+}
+.opcionInfo{
+	position: relative;
+}

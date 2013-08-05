@@ -8,7 +8,7 @@
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/adquiridos/PIE.js"></script>
 <![endif]-->
-<meta name="keywords" content="Zulia, Radio, Programa, Farandula, En vivo, Locutor, HTML5, Divertido">
+<meta name="keywords" content="Zulia, Televisión, Radio, Programa, Farandula, En vivo, Locutor, HTML5, Divertido">
 <meta name="author" content="Duranjo Web C.A.">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -34,45 +34,36 @@
 	  ga('create', 'UA-*********-1', '*******.com');
 	  ga('send', 'pageview');
 	</script> -->
-	<header id="home" class="cabecera">
+<header id="home" class="cabecera">	
+	<div class="wrapper">
+		<div class="redeSociales">Probando</div>
+	</div>
+	{% block navi %}
+	<nav class="ph-line-nav">
 		<div class="wrapper">
-			<div class="logoconbuenpie">
-				<img src="{% static 'img/logoconbuenpie.png' %}" alt="Logo de Con Buen Pie">
-			</div>			
-			<nav class="barraNavegacion">
-				{% block navi %} {% endblock%}
-			</nav>
+			<div class="logomenu">
+					<img src="{% static 'img/logoshowtime.png' %}" alt="Logo de Con Buen Pie">
+			</div>
+			<div class="barraNavegacion">
+				<a href="{% url 'homepageindex' %}">Inicio</a>
+				<a href="#galeria">Galería</a>
+				<a href="{% url 'homepageradio' %}">Radio</a>
+				<a href="#galeria">Noticias</a>
+				<a href="{% url 'homepagecontacto' %}">Contacto</a>
+				<div class="effect"></div>
+			</div>
 		</div>
-	</header>
+	</nav>
+	{% endblock%}
+		<div id="midground"></div>
+		<div id="foreground"></div>
+</header>
 	<section class="contenido">
 		{% block contenido %} {% endblock%}
 	</section>
 	{% block clear %} {% endblock %}
 	<footer>
 		{% block footer %}{% endblock%}
-		<div class="wrapper">
-			<p class="fraseFooter">En vivo de Lunes a Viernes de 10:00 AM a 11:00 AM.</p>
-			<div class="footer-der">
-				<div class="logoblanco"></div>
-				Copyright © 2013, Todos los derechos reservados.
-			</div>
-			<div class="footer-med">
-				<ul class="listaMenuFooter">
-					<li class="index"><a href="#">Inicio</a></li>
-					<li class="services"><a href="#galeria">Galería</a></li>
-					<li class="contact"><a href="#contacto">Contacto</a></li>
-				</ul>
-
-			</div>
-			<div class="footer-izq">
-				Diseño y Desarrollo por:
-				<div class="logoDuranjo">
-					<a href="http://duranjo.com/">
-						<img src="{% static 'img/duranjowhite.png' %}" alt="Duranjo Web C.A. Logo">
-					</a>
-				</div>
-			</div>		  
-		</div>
 	</footer>
 </body>
 </html>

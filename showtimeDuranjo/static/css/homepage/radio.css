@@ -1,0 +1,189 @@
+@charset 'utf-8';
+
+
+/* HEADER */
+#midground {
+	background: url(../../img/midground.png) repeat 20% 20%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+}
+#foreground {
+	background: url(../../img/foreground.png) repeat 90% 110%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+}
+header{
+	background: url(../../img/background.png) repeat 5% 5%;
+
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+header .wrapper{
+	position: relative;
+}
+.logo{
+	margin-top: 60px;
+	margin-right: 60px;
+	text-align: right;
+	position: relative;
+	z-index: 10;
+}
+nav{
+	margin-right: 5%;
+	margin-top: 25px;
+	margin-bottom: 10px;
+	text-align: right;
+	position: relative;
+	z-index: 10;
+}
+nav ul{
+	margin: 0;
+	padding: 0
+}
+nav ul li{
+	display: inline-block;
+}
+nav ul li a{
+	color: #FFF;
+	font-size: 1.5em;
+	margin-right: 60px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+/* end header */
+
+.contenido{
+	background: #232523;
+}
+/* == GRAMA == */
+.grama{
+	background: #30284d; /* Old browsers */
+	background: -moz-linear-gradient(left,  #30284d 0%, #30284d 8%, #662c4c 18%, #662c4c 24%, #472d86 33%, #603f38 44%, #603f38 51%, #603f38 57%, #472d86 68%, #662c4c 80%, #662c4c 86%, #30284d 96%, #30284d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#30284d), color-stop(8%,#30284d), color-stop(18%,#662c4c), color-stop(24%,#662c4c), color-stop(33%,#472d86), color-stop(44%,#603f38), color-stop(51%,#603f38), color-stop(57%,#603f38), color-stop(68%,#472d86), color-stop(80%,#662c4c), color-stop(86%,#662c4c), color-stop(96%,#30284d), color-stop(100%,#30284d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #30284d 0%,#30284d 8%,#662c4c 18%,#662c4c 24%,#472d86 33%,#603f38 44%,#603f38 51%,#603f38 57%,#472d86 68%,#662c4c 80%,#662c4c 86%,#30284d 96%,#30284d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #30284d 0%,#30284d 8%,#662c4c 18%,#662c4c 24%,#472d86 33%,#603f38 44%,#603f38 51%,#603f38 57%,#472d86 68%,#662c4c 80%,#662c4c 86%,#30284d 96%,#30284d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #30284d 0%,#30284d 8%,#662c4c 18%,#662c4c 24%,#472d86 33%,#603f38 44%,#603f38 51%,#603f38 57%,#472d86 68%,#662c4c 80%,#662c4c 86%,#30284d 96%,#30284d 100%); /* IE10+ */
+	background: linear-gradient(to right,  #30284d 0%,#30284d 8%,#662c4c 18%,#662c4c 24%,#472d86 33%,#603f38 44%,#603f38 51%,#603f38 57%,#472d86 68%,#662c4c 80%,#662c4c 86%,#30284d 96%,#30284d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30284d', endColorstr='#30284d',GradientType=1 ); /* IE6-9 */
+	border-top: 3px solid #30284D;
+
+	position: relative;
+	text-align: right;
+	padding-top: 10px;
+	padding-bottom: 70px;
+}
+.grama > .wrapper{
+	position: relative;
+}
+.presentadores{
+	background: url(../../img/presentadores.png) no-repeat center;
+	position: absolute;
+	width: 508px;
+	height: 490px;
+	top: -290px;
+	z-index: 5;
+}
+.tituloPrincipal{
+	width: 57%;
+	margin-left: 43%;
+}
+.rayagris{
+	position: absolute;
+	top: 82px;
+	background: #C8CFCC;
+	height: 40px;
+	width: 100%;
+	border-bottom: 3px solid #767A6E;
+	box-shadow: 0 12px 0 #2D3B2B;
+}
+
+/* ==  Transmisión == */
+.transmision p{
+	text-align: right;
+	color: #FFF;
+	font-size: 1.5em;
+	text-shadow: 1px 1px 1px #000;
+}
+.reproducto{
+	height: 500px;
+	width: 850px;
+	background: black;
+	margin: 0 auto 0 auto;
+}
+/* ==  Galería == */
+.aboutus{
+	margin-top: 50px;
+	background: url(../../img/notasmusicales.png) no-repeat;
+	background-position: bottom;
+}
+.aboutus  .galeria{
+	width: 62%;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 40px;
+}
+.aboutus .info{
+	padding: 0 0 0 40px;
+	vertical-align: top;
+	display: inline-block;
+	width: 34%;
+	color: white;
+	position: relative;
+}
+.info p{
+	font-size: 1.1em;
+	text-align: justify;
+	padding-right: 20px;
+}
+.titulo{
+	text-transform: uppercase;
+	font-size: 2.5em;
+}
+.mataCosita{
+	position: absolute;
+	top: -22px;
+	left: -4px;
+	background: url(../../img/cositas.png) 0 0;
+	width: 75px;
+	height: 80px;
+	z-index: 1;
+}
+.sliderPosition{
+	width: 635px;
+	height: 475px;
+}
+.endless_page_template ul{
+	list-style: none;
+}
+.endless_page_template ul li{
+	display: inline-block;
+}
+.endless_page_template ul li a img{
+	width: 150px;
+}
+.foto{
+	width: 150px;
+	height: 125px;
+}
+.logoblanco{
+	background: url(../../img/logoengaleria.png) no-repeat 0 0;
+	height: 85px;
+	margin: 0 auto 30px auto;
+}
+.imagenGrande{
+	position: relative;
+	background: url(../../img/cuadro.png) no-repeat;
+	width: 632px;
+	height: 475px;
+	padding: 4%;
+	margin-bottom: 50px;
+	z-index: 5;
+	text-align: center;
+}
+.imagenGrande > img{
+	max-width: 634px;
+	max-height: 473px;
+	vertical-align: middle;
+}

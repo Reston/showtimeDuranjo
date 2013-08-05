@@ -2,10 +2,11 @@ $( document ).ready(function() {
 // This is a functions that scrolls to #{blah}link
 	$("nav > ul > li").click(function(e){
 	// Prevent a page reload when a link is pressed
+	if ($(this).attr("id")!="homeMenu") {
 		e.preventDefault();
 	// Call the scroll function
 		goToByScroll($(this).attr("id"));
-
+		}
 	});
 
 	function goToByScroll(id){
