@@ -1,4 +1,7 @@
 @charset 'utf-8';
+h1{
+	display: none;
+}
 nav{
 	background: #30284d; /* Old browsers */
 	background: -moz-linear-gradient(left,  #30284d 0%, #30284d 8%, #662c4c 18%, #662c4c 24%, #472d86 33%, #603f38 44%, #603f38 51%, #603f38 57%, #472d86 68%, #662c4c 80%, #662c4c 86%, #30284d 96%, #30284d 100%); /* FF3.6+ */
@@ -9,9 +12,9 @@ nav{
 	background: linear-gradient(to right,  #30284d 0%,#30284d 8%,#662c4c 18%,#662c4c 24%,#472d86 33%,#603f38 44%,#603f38 51%,#603f38 57%,#472d86 68%,#662c4c 80%,#662c4c 86%,#30284d 96%,#30284d 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30284d', endColorstr='#30284d',GradientType=1 ); /* IE6-9 */
 	
-	margin-top: 80px;
+	margin-top: 40px;
 	margin-bottom: 10px;
-	padding: 10px;
+	padding: 5px;
 	text-align: right;
 	position: relative;
 	z-index: 10;
@@ -20,7 +23,7 @@ nav a{
 	display: inline-block;
 	width: 10%;
 	color: #FFF;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	margin-right: 60px;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -69,4 +72,31 @@ nav a{
   height: 2px;
   background: #FFF; 
   margin-left:-45px;
+}
+
+/* GALERIA */
+.sliderPosition{
+	width: 100%;
+	color: rgba(0, 0, 0, 0);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+/*fin galeria*/
+.lineaGradiente{
+	background: #462d86; /* Old browsers */
+	background: -moz-linear-gradient(left,  #462d86 1%, #462d86 6%, #da1c84 16%, #da1c84 27%, #462d86 36%, #da1c84 40%, #e87927 44%, #e87927 50%, #e87927 57%, #da1c84 60%, #462d86 65%, #da1c84 77%, #da1c84 88%, #462d86 96%, #462d86 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(1%,#462d86), color-stop(6%,#462d86), color-stop(16%,#da1c84), color-stop(27%,#da1c84), color-stop(36%,#462d86), color-stop(40%,#da1c84), color-stop(44%,#e87927), color-stop(50%,#e87927), color-stop(57%,#e87927), color-stop(60%,#da1c84), color-stop(65%,#462d86), color-stop(77%,#da1c84), color-stop(88%,#da1c84), color-stop(96%,#462d86), color-stop(100%,#462d86)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #462d86 1%,#462d86 6%,#da1c84 16%,#da1c84 27%,#462d86 36%,#da1c84 40%,#e87927 44%,#e87927 50%,#e87927 57%,#da1c84 60%,#462d86 65%,#da1c84 77%,#da1c84 88%,#462d86 96%,#462d86 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #462d86 1%,#462d86 6%,#da1c84 16%,#da1c84 27%,#462d86 36%,#da1c84 40%,#e87927 44%,#e87927 50%,#e87927 57%,#da1c84 60%,#462d86 65%,#da1c84 77%,#da1c84 88%,#462d86 96%,#462d86 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #462d86 1%,#462d86 6%,#da1c84 16%,#da1c84 27%,#462d86 36%,#da1c84 40%,#e87927 44%,#e87927 50%,#e87927 57%,#da1c84 60%,#462d86 65%,#da1c84 77%,#da1c84 88%,#462d86 96%,#462d86 100%); /* IE10+ */
+	background: linear-gradient(to right,  #462d86 1%,#462d86 6%,#da1c84 16%,#da1c84 27%,#462d86 36%,#da1c84 40%,#e87927 44%,#e87927 50%,#e87927 57%,#da1c84 60%,#462d86 65%,#da1c84 77%,#da1c84 88%,#462d86 96%,#462d86 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#462d86', endColorstr='#462d86',GradientType=1 ); /* IE6-9 */
+	height: 10px;
+}
+/* Ultimas noticias y sinopsis con twitter*/
+
+.ultimasNoticiasSinopsis{
+	background: url(../../img/diagmonds.png);
 }

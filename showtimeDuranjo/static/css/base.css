@@ -27,7 +27,30 @@ h1{
 .redeSociales{
 	text-align: right;
 }
-
+.twitterlogo, .facebook, .googleplus, .instagram{
+	background: url(../img/iconos.png) no-repeat;
+	display: inline-block;
+}
+.twitterlogo{
+	background-position: 0 0;
+	height: 35px;
+	width: 40px;
+}
+.facebook{
+	background-position: -40px 0;
+	height: 35px;
+	width: 40px;
+}
+.googleplus{
+	background-position: -85px 0;
+	height: 35px;
+	width: 40px;
+}
+.instagram{
+	background-position: -125px 0;
+	height: 35px;
+	width: 40px;
+}
 /* FOOTER */
 footer{
 	color: #FFF;

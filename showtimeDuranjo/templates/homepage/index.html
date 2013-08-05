@@ -9,7 +9,49 @@ Show Time - Inicio
 {% endblock%}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/homepage/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
 {% endblock css %}
+{% block js %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+{% endblock js %}
+{% block contenido %}
+<h1>Show time, Programa de televisión y radio del Zulia.</h1>
+<section class="galeria">
+	<div class="wrapper">
+	<div class="sliderPosition">
+		<div class="flexslider">
+			<ul class="slides">
+				<li><img src="{% static 'img/presentadores.png' %}" alt="hola que hace"></li>
+				<li><img src="{% static 'img/presentadores.png' %}" alt="hola que hace"></li>
+				<li><img src="{% static 'img/presentadores.png' %}" alt="hola que hace"></li>
+		 	</ul>
+		</div>		
+	</div>
+	</div>
+</section>
+<div class="lineaGradiente"></div>
+<section class="ultimasNoticiasSinopsis">
+	<div class="ultimasNoticias">
+		<article></article>
+	</div>
+	<div class="sinopsis">
+
+		<div class="twitter">
+			<a class="twitter-timeline" href="https://twitter.com/restonjd" data-widget-id="364519296744976384">Tweets por @restonjd</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+	</div>
+</section>
+	<!-- SLIDER INIT -->
+	<script>
+		$(document).ready(function() {
+		  $('.flexslider').flexslider({
+		  	animation: "slide"
+		  });
+		});
+	</script>
+{% endblock contenido %}
 {% block footer %}
 <div class="wrapper">
 			<div class="footer-der">
