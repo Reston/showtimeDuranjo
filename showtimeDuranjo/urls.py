@@ -11,9 +11,9 @@ sitemaps = {
 urlpatterns = patterns(
 	'',
 	# Examples:
-	# url(r'^$', 'conbuenpieDuranjo.views.home', name='home'),
-	# url(r'^conbuenpieDuranjo/', include('conbuenpieDuranjo.foo.urls')),
-	url(r'^', include('conbuenpieDuranjo.apps.homepage.urls')),
+	# url(r'^$', 'showtimeDuranjo.views.home', name='home'),
+	# url(r'^showtimeDuranjo/', include('showtimeDuranjo.foo.urls')),
+	url(r'^', include('showtimeDuranjo.apps.homepage.urls')),
 	# Uncomment the admin/doc line below to enable admin documentation:
 	# url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

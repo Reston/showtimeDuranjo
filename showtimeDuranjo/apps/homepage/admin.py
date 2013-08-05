@@ -1,6 +1,6 @@
 from django.contrib import admin
 #from django.contrib.contenttypes import generic
-from conbuenpieDuranjo.apps.homepage.models import Galeria
+from showtimeDuranjo.apps.homepage.models import Galeria
 
 
 class GaleriaAdmin(admin.ModelAdmin):

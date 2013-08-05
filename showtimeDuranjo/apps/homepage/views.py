@@ -1,10 +1,10 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
 from django.shortcuts import render_to_response
-from conbuenpieDuranjo.apps.homepage.forms import *
 from django.template import RequestContext
 from django.core.mail import send_mail
-from conbuenpieDuranjo.apps.homepage.models import Galeria
+from showtimeDuranjo.apps.homepage.forms import *
+from showtimeDuranjo.apps.homepage.models import Galeria
 
 
 def index(request, template='homepage/index.html', page_template='homepage/index_galeria.html'):

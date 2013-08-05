@@ -1,5 +1,5 @@
 # -*- encoding:utf-8 -*-
-# Django settings for conbuenpieDuranjo project.
+# Django settings for showtimeDuranjo project.
 import os
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -107,10 +107,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'conbuenpieDuranjo.urls'
+ROOT_URLCONF = 'showtimeDuranjo.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'conbuenpieDuranjo.wsgi.application'
+WSGI_APPLICATION = 'showtimeDuranjo.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -130,7 +130,7 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    'conbuenpieDuranjo.apps.homepage',
+    'showtimeDuranjo.apps.homepage',
     'endless_pagination',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
