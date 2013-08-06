@@ -2,77 +2,6 @@
 h1{
 	display: none;
 }
-nav{
-	background: #30284d; /* Old browsers */
-	background: -moz-linear-gradient(left,  #30284d 0%, #30284d 8%, #662c4c 18%, #662c4c 24%, #472d86 33%, #603f38 44%, #603f38 51%, #603f38 57%, #472d86 68%, #662c4c 80%, #662c4c 86%, #30284d 96%, #30284d 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#30284d), color-stop(8%,#30284d), color-stop(18%,#662c4c), color-stop(24%,#662c4c), color-stop(33%,#472d86), color-stop(44%,#603f38), color-stop(51%,#603f38), color-stop(57%,#603f38), color-stop(68%,#472d86), color-stop(80%,#662c4c), color-stop(86%,#662c4c), color-stop(96%,#30284d), color-stop(100%,#30284d)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  #30284d 0%,#30284d 8%,#662c4c 18%,#662c4c 24%,#472d86 33%,#603f38 44%,#603f38 51%,#603f38 57%,#472d86 68%,#662c4c 80%,#662c4c 86%,#30284d 96%,#30284d 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  #30284d 0%,#30284d 8%,#662c4c 18%,#662c4c 24%,#472d86 33%,#603f38 44%,#603f38 51%,#603f38 57%,#472d86 68%,#662c4c 80%,#662c4c 86%,#30284d 96%,#30284d 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  #30284d 0%,#30284d 8%,#662c4c 18%,#662c4c 24%,#472d86 33%,#603f38 44%,#603f38 51%,#603f38 57%,#472d86 68%,#662c4c 80%,#662c4c 86%,#30284d 96%,#30284d 100%); /* IE10+ */
-	background: linear-gradient(to right,  #30284d 0%,#30284d 8%,#662c4c 18%,#662c4c 24%,#472d86 33%,#603f38 44%,#603f38 51%,#603f38 57%,#472d86 68%,#662c4c 80%,#662c4c 86%,#30284d 96%,#30284d 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30284d', endColorstr='#30284d',GradientType=1 ); /* IE6-9 */
-	
-	margin-top: 40px;
-	margin-bottom: 10px;
-	padding: 5px;
-	text-align: right;
-	position: relative;
-	z-index: 10;
-}
-nav a{
-	display: inline-block;
-	width: 10%;
-	color: #FFF;
-	font-size: 1.1em;
-	margin-right: 60px;
-	text-transform: uppercase;
-	text-decoration: none;
-	-webkit-transition: .7s;
-	  -moz-transition: .7s;
-	  -o-transition: .7s;
-	  -ms-transition: .7s;
-	  transition: .7s; }
-.barraNavegacion{
-	height: 25px;
-	overflow: hidden;
-	position: relative;
-	margin-left: 30%;
-}
-.logomenu{
-	position: absolute;
-	top: -80px;
-	left: 22%;
-	z-index: 10;
-}
-
-.effect {
-	position: absolute;
-	z-index: 50;
-	left: -12.5%;
-	-webkit-transition: 0.7s ease-in-out;
-	-moz-transition: 0.7s ease-in-out;
-	-o-transition: 0.7s ease-in-out;
-	-ms-transition: 0.7s ease-in-out;
-	transition: 0.7s ease-in-out; }
-
-	nav a:nth-child(1):hover ~ .effect {/* Inicio */
-	  left: 17.5%; }
-	nav a:nth-child(2):hover ~ .effect {/* Galeria */
-	  left: 33.5%; }
-	nav a:nth-child(3):hover ~ .effect {/* Radio */
-	  left: 52.5%; }
-	nav a:nth-child(4):hover ~ .effect {/* Noticias */
-	  left: 69.5%; }
-	nav a:nth-child(5):hover ~ .effect {/* Contacto */
-	  left: 88.22%; }
-/* ----- line example -----*/
-
-.ph-line-nav .effect {
-  width: 110px;
-  height: 2px;
-  background: #FFF; 
-  margin-left:-45px;
-}
 
 /* GALERIA */
 .sliderPosition{
@@ -99,4 +28,47 @@ nav a{
 
 .ultimasNoticiasSinopsis{
 	background: url(../../img/diagmonds.png);
+	padding: 40px 0;
+}
+.ultimasNoticias, .sinopsis{
+	vertical-align: top;
+	display: inline-block;
+	width: 49%;
+	position: relative;
+}
+.estrella{
+	position: absolute;
+	background: url(../../img/estrellas.png) no-repeat;
+}
+.estrellapos1{
+	top: 6px;
+	left: -67px;
+	background-position: -17px -17px;
+	width: 70px;
+	height: 64px;
+	z-index: 1;
+}
+.estrellapos2{
+	top: 0;
+	left: 87px;
+	background-position: -134px -17px;
+	width: 75px;
+	height: 64px;
+	z-index: 1;
+}
+.ultimasNoticias article{
+	display: inline-block;
+	vertical-align: top;
+	width: 45%;
+	padding: 2%;
+}
+.ultimasNoticias article img{
+	width: 100%;
+}
+.ultimasNoticias .tituloNoticia{
+	border-bottom: 2px solid white;
+	font-size: 1.3em;
+}
+.ultimasNoticias p, .sinopsis p{
+	text-align: justify;
 }

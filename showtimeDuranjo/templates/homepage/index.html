@@ -22,9 +22,10 @@ Show Time - Inicio
 	<div class="sliderPosition">
 		<div class="flexslider">
 			<ul class="slides">
-				<li><img src="{% static 'img/presentadores.png' %}" alt="hola que hace"></li>
-				<li><img src="{% static 'img/presentadores.png' %}" alt="hola que hace"></li>
-				<li><img src="{% static 'img/presentadores.png' %}" alt="hola que hace"></li>
+				<li><img src="{% static 'img/showimg1.jpg' %}" alt="hola que hace"></li>
+				<li><img src="{% static 'img/showimg2.jpg' %}" alt="hola que hace"></li>
+				<li><img src="{% static 'img/showimg3.jpg' %}" alt="hola que hace"></li>
+				<li><img src="{% static 'img/showimg4.jpg' %}" alt="hola que hace"></li>
 		 	</ul>
 		</div>		
 	</div>
@@ -32,14 +33,41 @@ Show Time - Inicio
 </section>
 <div class="lineaGradiente"></div>
 <section class="ultimasNoticiasSinopsis">
-	<div class="ultimasNoticias">
-		<article></article>
-	</div>
-	<div class="sinopsis">
-
-		<div class="twitter">
-			<a class="twitter-timeline" href="https://twitter.com/restonjd" data-widget-id="364519296744976384">Tweets por @restonjd</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<div class="wrapper">
+		<div class="ultimasNoticias">
+			<h2 class="titulo"><div class="estrella estrellapos1"></div>Ultimas Noticias</h2>
+			<article>
+				<img src="{% static 'img/showimg4.jpg' %}" alt="articulo">
+				<div class="tituloNoticia">Titulo de la noticia.</div>
+				<p>Mattis nunc, in enim et cras! Elementum lundium adipiscing aenean. A in a amet a, velit rhoncus sit augue aliquet.</p>
+			</article>
+			<article>
+				<img src="{% static 'img/showimg4.jpg' %}" alt="articulo">
+				<div class="tituloNoticia">Titulo de la noticia.</div>
+				<p>Mattis nunc, in enim et cras! Elementum lundium adipiscing aenean. A in a amet a, velit rhoncus sit augue aliquet.</p>
+			</article>
+			<article>
+				<img src="{% static 'img/showimg4.jpg' %}" alt="articulo">
+				<div class="tituloNoticia">Titulo de la noticia.</div>
+				<p>Mattis nunc, in enim et cras! Elementum lundium adipiscing aenean. A in a amet a, velit rhoncus sit augue aliquet.</p>
+			</article>
+			<article>
+				<img src="{% static 'img/showimg4.jpg' %}" alt="articulo">
+				<div class="tituloNoticia">Titulo de la noticia.</div>
+				<p>Mattis nunc, in enim et cras! Elementum lundium adipiscing aenean. A in a amet a, velit rhoncus sit augue aliquet.</p>
+			</article>
+		</div>
+		<div class="sinopsis">
+			<div class="info">
+				<h2 class="titulo">Sinopsis<div class="estrella estrellapos2"></div></h2>
+				<p>Programa de radio transmitido por Feria 106.9 FM conducido por Yonna Cabrera y Samir Shker, 
+					bajo la producción de Marco Villalobos. Una hora divertida y amena ¡Para personas como tu! 
+					Escuchanos de lunes a viernes a las 10 de la mañana.</p>
+			</div>
+			<div class="twitter">
+				<a class="twitter-timeline" href="https://twitter.com/restonjd" data-widget-id="364519296744976384">Tweets por @restonjd</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
 		</div>
 	</div>
 </section>
@@ -52,26 +80,3 @@ Show Time - Inicio
 		});
 	</script>
 {% endblock contenido %}
-{% block footer %}
-<div class="wrapper">
-			<div class="footer-der">
-				<div class="logo">
-					<img src="{% static 'img/logoshowtime.png' %}" alt="Logo de Con Buen Pie">
-				</div>
-			</div>
-			<div class="footer-med">
-				<ul class="listaMenuFooter">
-					<li class="index"><a href="#">Inicio</a></li>
-				</ul>
-			</div>
-			<div class="footer-izq">
-				Diseño y Desarrollo por:
-				<div class="logoDuranjo">
-					<a href="http://duranjo.com/">
-						<img src="{% static 'img/duranjowhite.png' %}" alt="Duranjo Web C.A. Logo">
-					</a>
-				</div>
-			</div>		  
-</div>
-Copyright © 2013, Todos los derechos reservados.
-{% endblock %}

@@ -44,7 +44,7 @@
 		</div>
 	</div>
 	{% block navi %}
-	<nav class="ph-line-nav">
+	<nav class="ph-line-nav nav">
 		<div class="wrapper">
 			<div class="logomenu">
 					<img src="{% static 'img/logoshowtime.png' %}" alt="Logo de Con Buen Pie">
@@ -68,7 +68,36 @@
 	</section>
 	{% block clear %} {% endblock %}
 	<footer>
-		{% block footer %}{% endblock%}
+		{% block footer %}
+			<div class="wrapper">
+				<div class="footer-der">
+					<div class="logo">
+						<img src="{% static 'img/logoshowtime.png' %}" alt="Logo de Con Buen Pie">
+					</div>
+				</div>
+				<div class="footer-med">
+					<ul class="listaMenuFooter">
+						<li><a href="{% url 'homepageindex' %}">Inicio</a>
+						<li><a href="#galeria">Galería</a>
+						<li><a href="{% url 'homepageradio' %}">Radio</a>
+						<li><a href="#galeria">Noticias</a>
+						<li><a href="{% url 'homepagecontacto' %}">Contacto</a>
+					</ul>
+					<div class="sintonizar">
+						Sintonizanos por Global TV Todos los sábados a las 8:00 PM
+					</div>
+				</div>
+				<div class="footer-izq">
+					Diseño y Desarrollo por:
+					<div class="logoDuranjo">
+						<a href="http://duranjo.com/">
+							<img src="{% static 'img/duranjowhite.png' %}" alt="Duranjo Web C.A. Logo">
+						</a>
+					</div>
+				</div>		  
+			</div>
+			Copyright © 2013, Todos los derechos reservados.
+		{% endblock%}
 	</footer>
 </body>
 </html>
