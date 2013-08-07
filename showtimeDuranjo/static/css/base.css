@@ -14,7 +14,7 @@ h1{
 	margin: 0;
 	color: white;
 	font-family: 'Lobster', Helvetica, Arial;
-	text-shadow: 7px 7px 3px rgba(0, 0, 0, 0.25);
+	text-shadow: 7px 7px 1px rgba(0, 0, 0, 0.7);
 	font-size: 2.8em;
 }
 .wrapper{
@@ -34,8 +34,8 @@ h1{
 	background: linear-gradient(to right,  #30284d 0%,#30284d 8%,#662c4c 18%,#662c4c 24%,#472d86 33%,#603f38 44%,#603f38 51%,#603f38 57%,#472d86 68%,#662c4c 80%,#662c4c 86%,#30284d 96%,#30284d 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30284d', endColorstr='#30284d',GradientType=1 ); /* IE6-9 */
 	
-	margin-top: 40px;
-	padding: 5px;
+	margin-top: 30px;
+	padding: 7px;
 	text-align: right;
 	position: relative;
 	z-index: 10;

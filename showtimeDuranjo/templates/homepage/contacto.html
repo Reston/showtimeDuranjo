@@ -1,14 +1,42 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="Página de contacto del programa Show Time emitido en por Global TV sábados a las 8:00 PM">
+{% endblock%}
+{% block title %}
+Show Time - Contacto
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{% static 'css/homepage/contacto.css' %}">
+{% endblock %}
+{% block contenido %}
 <!--  CONTACTO -->
 	<section id="contacto" class="infoContacto">
-		<div class="cercaBlanca"></div>
 		<div class="contacto">
 			<div class="wrapper">
-				<h2 class="titulo"><div class="mataCosita2"></div>Contacto</h2>
+				<h2 class="titulo"><div class="estrella estrellapos1"></div>Contacto</h2>
 				<div class="sectionContacto">
 					<div class="opcionInfo">
 						<div class="tituloOpcionInfo">Correo:</div>
 						<div class="infoOpcion">
 							contacto@conbuenpie.com.ve
+						</div>
+					</div>
+					<div class="opcionInfo ">
+						<div class="tituloOpcionInfo">Google+:</div>
+						<div class="infoOpcion">
+							<!-- Place this tag where you want the badge to render. -->
+							<div class="g-plus" data-width="300" data-href="//plus.google.com/101327765584320539080" data-rel="publisher"></div>
+							<!-- Place this tag after the last badge tag. -->
+							<script type="text/javascript">
+							  window.___gcfg = {lang: 'es-419'};
+							  (function() {
+							    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+							    po.src = 'https://apis.google.com/js/plusone.js';
+							    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+							  })();
+							</script>
 						</div>
 					</div>
 					<div class="opcionInfo">
@@ -23,23 +51,6 @@
 						<div class="infoOpcion">
 							<div class="fb-like" data-href="http://facebook.com/conbuenpiemcbo" 
 							data-width="300" data-layout="button_count" data-show-faces="true" data-send="true"></div>
-						</div>
-					</div>
-					<div class="opcionInfo ">
-						<div class="tituloOpcionInfo">Google+:</div>
-						<div class="infoOpcion">
-							<!-- Place this tag where you want the badge to render. -->
-							<div class="g-plus" data-width="300" data-href="//plus.google.com/101327765584320539080" data-rel="publisher"></div>
-							<!-- Place this tag after the last badge tag. -->
-							<script type="text/javascript">
-							  window.___gcfg = {lang: 'es-419'};
-
-							  (function() {
-							    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-							    po.src = 'https://apis.google.com/js/plusone.js';
-							    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-							  })();
-							</script>
 						</div>
 					</div>
 				</div>
@@ -89,3 +100,15 @@
 			</div>
 		</div>
 	</section>
+	<!-- FACEBOOK SCRIPT -->
+	<div id="fb-root"></div>
+		<script async>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- TWITTER SCRIPT -->
+	<script async>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
+{% endblock contenido%}

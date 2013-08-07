@@ -1,22 +1,19 @@
 @charset 'utf-8';
+.contenido{
+	background: url(../../img/contactofondo.png) repeat-x bottom, url(../../img/diagmonds.png);
+}
 /* ==  Contacto == */
 .infoContacto{color: white}
-.cercaBlanca{
-	background: url(../img/cerca.png);
-	width: 100%;
-	height: 102px;
-	border-bottom: 10px solid #C9D8C9;
-}
 .contacto{
-	background: url(../img/texturacontacto.jpg);
-	padding: 50px 0;
-
+	background: url(../../img/ciudadcontacto.png) no-repeat bottom center;
+	padding: 85px 0 300px 0;
 }
 .contacto > .wrapper{
 	position: relative;
 }
 .contacto .titulo{
 	margin: 0;
+	position: relative;
 }
 .sectionContacto{
 	position: relative;
@@ -30,13 +27,16 @@ form .sectionContacto{
 .sectionContacto, form{
 	margin-top: 30px;
 }
-.mataCosita2{
+.estrella{
 	position: absolute;
-	top: -60px;
-	left: -30px;
-	background: url(../img/cositas.png) 119px 0;
-	width: 75px;
-	height: 80px;
+	background: url(../../img/estrellas.png) no-repeat;
+}
+.estrellapos1{
+	top: -27px;
+	left: -56px;
+	background-position: -17px -17px;
+	width: 70px;
+	height: 64px;
 	z-index: 1;
 }
 form{
@@ -53,7 +53,7 @@ form{
 }
 
 .campo input{
-	background: #E6E7E7;
+	background: rgba(230, 231, 231, 0.7);
 	border: 1px solid #CCCCCC;
 	text-indent: 5px;
 	height: 33px;
@@ -68,7 +68,7 @@ form{
 	margin-bottom: 3px;
 }
 textarea{
-	background: #E6E7E7;
+	background: rgba(230, 231, 231, 0.7);
 	border: 1px solid #CCCCCC;
 	width: 84%;
 }
@@ -97,7 +97,7 @@ textarea{
 }
 input[type="submit"]{
 	margin-top: 10px;
-	background: #3F8F25;
+	background: #582B5B;
 	padding: 5px 20px;
 	border: none;
 	color: whitesmoke;
@@ -113,17 +113,13 @@ input[type="submit"]{
 	margin: 0 auto 0 auto;
 }
 .tituloOpcionInfo{
-	background: #3F8F25;
-	box-shadow: 3px 3px 1px #000;
 	font-size: 1.2em;
 	width: 85%;
 	text-indent: 15px;
-	font-weight: bold;
 	padding: 5px 0;
 }
 .infoOpcion{
 	text-align: left;
-	font-size: 1.2em;
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
@@ -142,4 +138,6 @@ input[type="submit"]{
 }
 .opcionInfo{
 	position: relative;
+	border-top: 1px solid #808080;
+	width: 80%;
 }
