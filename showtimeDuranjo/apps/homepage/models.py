@@ -14,3 +14,7 @@ class Galeria(models.Model):
 	def get_absolute_url(self):
 		titulo = self.titulo.replace(' ', '_')
 		return reverse('indexindex', kwargs={'titulo': titulo})
+
+	class Meta:
+		verbose_name = 'Galeria de la radio'
+		verbose_name_plural = 'Galeria de la radio'

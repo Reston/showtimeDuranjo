@@ -16,7 +16,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'conbuenpie_base',                      # Or path to database file if using sqlite3.
+        'NAME': 'showtime_base',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'duranjo',
         'PASSWORD': 'Emprendimiento_2013',
@@ -131,6 +131,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     'showtimeDuranjo.apps.homepage',
+    'showtimeDuranjo.apps.galeria',
     'endless_pagination',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',

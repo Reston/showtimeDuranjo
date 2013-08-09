@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load staticfiles %}
+{% load custom_filters %}
+{% block head %} 
+<meta name="description" content="Lista de imagenes y videos en la galeria del programa de televisión y radio ShowTime.">
+<meta name="msvalidate.01" content="5C0D61EB459CD0F5B9245FEA8F798DAA" />
+{% endblock%}
+{% block title %}
+Galeria de videos y imagenes de ShowTime.
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{% static 'css/galeria/galeria.css' %}">
+{% endblock %}
+{% block js %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="{% static 'js/adquiridos/jquery.lazyload.js' %}"></script>
+<script src="{% static 'js/adquiridos/back-top.js' %}"></script>
+{% endblock %}
+{% block contenido %}
+<section class="categoria">
+	<div class="wrapper">
+		<section id="galerialista" class="galeria">
+			<div class="busquedabox">
+				<a class="back-link" href="{% url 'homepageindex' %}">«Volver</a>
+				<form action="#galerialista" method="POST">	{% csrf_token %}
+					<input class="textbuscar" type="text" name="busqueda">
+					<input class="botonbuscar"type="submit" value="Buscar">
+				</form>
+			</div>
+			<div class="lista">
+				{% regroup lista_galeria by creado_en|date:"F Y" as lista_por_mes %} 
+				{% for mes in lista_por_mes %}
+				<div class="mesGrouper">{{ mes.grouper }}</div>
+					{% for galeria in mes.list %}
+						{% if galeria.es_video %}
+							<a class="itemGaleria" href="{{galeria.get_absolute_url}}">
+								<div class="video">
+									<div class="tituloVideo">></div>
+									<img class="lazy" src="{% static 'img/grey.gif' %}" data-original="{{galeria.enlace_video|youthumbnail:'l'}}" alt="{{galeria.titulo}}">
+								</div>
+								<div class="titulo">galeria.titulo</div>
+							</a>
+						{% else %}
+							<a class="itemGaleria" href="{{galeria.get_absolute_url}}">
+								<div class="album">
+									<div class="numeroFotos">{{ galeria.imagenes.count }}</div>
+									{% with galeria.imagenes.all|first as image %}
+										<img class="lazy" src="{% static 'img/grey.gif' %}" data-original="{{ MEDIA_URL }}/{{ image.imagen }}" alt="{{galeria.titulo}}">
+									{% endwith %}
+								</div>
+								<div class="titulo">{{galeria.titulo}}</div>			
+							</a>
+						{% endif %}
+					{% endfor %}
+				{% endfor %}
+			</div>
+		</section>
+	</div>
+</section>
+<!-- BACK TOP BOX -->
+<div id="back-top" class="back-top">
+	<a href="#home"><span>↑</span>Regresar arriba</a>
+</div>
+<script>
+	$("img.lazy").lazyload();
+</script>
+{% endblock %}

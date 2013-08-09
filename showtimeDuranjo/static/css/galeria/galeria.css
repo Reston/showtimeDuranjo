@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+.itemGaleria{
+	display: inline-block;
+	width: 33%;
+}
+
+.album img, .video img{
+	width: 340px;
+	height: 250px;
+}
+.album img{
+	border: 5px solid #FFF;
+}
