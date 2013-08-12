@@ -1,14 +1,115 @@
 @charset 'utf-8';
-
+.contenido{
+	background: url(../../img/diagmonds.png);
+}
+.menuGaleria{
+	padding-top: 50px;
+	text-align: center;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+.menuGaleria ul li{
+	display: inline-block;
+	padding: 5px;
+}
+.menuGaleria ul li a{
+	text-decoration: none;
+	color: white;
+}
+.active{
+	background: #3F595E;
+}
 .itemGaleria{
 	display: inline-block;
-	width: 33%;
+	width: 31%;
+	text-decoration: none;
+	padding: 1%;
 }
-
+.mesGrouper{
+	padding: 10px 0 10px 14%;
+	width: 13%;
+	font-size: 1.8em;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.mesGrouper:nth-of-type(odd){
+	background: #752271;
+}
+.mesGrouper:nth-of-type(3n){
+	background: #564294;
+}
+.mesGrouper:nth-of-type(6n-1){
+	background: #03B7ED;
+}
 .album img, .video img{
-	width: 340px;
+	width: 98%;
 	height: 250px;
 }
 .album img{
 	border: 5px solid #FFF;
+}
+.album{
+	position: relative;
+}
+.numeroFotos{
+	position: absolute;
+	width: 40px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 1.5em;
+	color: #FFF;
+}
+.itemGaleria:nth-child(odd) .numeroFotos {
+	background: #752271;
+}
+.itemGaleria:nth-child(even) .numeroFotos{
+	background: #564294;
+}
+.itemGaleria:nth-child(3n) .numeroFotos{
+	background: #03B7ED;
+}
+.itemGaleria:nth-child(odd) .titulo span{
+	border-bottom: 3px solid #752271;
+}
+.itemGaleria:nth-child(even) .titulo span{
+	border-bottom: 3px solid #564294
+}
+.itemGaleria:nth-child(3n) .titulo span{
+	border-bottom: 3px solid #03B7ED
+}
+.video{
+	position: relative;
+}
+.playIcon{
+	position: absolute;
+	top: 35%;
+	left: 40%;
+	background: url(../../img/playicon.png) no-repeat;
+	width: 75px;
+	height: 75px;
+}
+.titulo{
+	text-align: center;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	color: #FFF;
+}
+.busquedabox{
+	text-align: right;
+	margin-right: 14%;
+	margin-top: 24px;
+}
+.textbuscar{
+	background: #E6E7E7;
+	border: 1px solid #CCCCCC;
+	text-indent: 5px;
+	height: 26px;
+	width: 22%;
+}
+.botonbuscar{
+	background: gray;
+	padding: 5px 20px;
+	border: none;
+	color: whitesmoke;
 }

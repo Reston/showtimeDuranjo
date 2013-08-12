@@ -1,3 +1,9 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load staticfiles %}
+{% load custom_filters %}
+{% block contenido %}
 <div>
-{{ link.url|youtube_embed_url|safe }}
+{{ video.enlace_video|youtube_embed_url|safe }}
 </div>
+{% endblock contenido %}

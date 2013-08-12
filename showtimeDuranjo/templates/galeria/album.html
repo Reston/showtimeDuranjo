@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load staticfiles %}
+{% load custom_filters %}
+{% block contenido %}
+<section class="menuGaleria">
+		<div class="wrapper">
+			{{album.titulo}}
+		</div>
+	</section>
+<section id="galerialista" class="galeria">
+	<div class="wrapper">
+		{% for imagen in imagenes %}
+		<img src="{{ MEDIA_URL }}/{{imagen.imagen}}" alt="{{album.titulo}}">
+		{% endfor %}
+	</div>
+</section>
+{% endblock contenido %}

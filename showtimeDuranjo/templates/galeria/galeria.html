@@ -18,50 +18,59 @@ Galeria de videos y imagenes de ShowTime.
 <script src="{% static 'js/adquiridos/back-top.js' %}"></script>
 {% endblock %}
 {% block contenido %}
-<section class="categoria">
-	<div class="wrapper">
+	<section class="menuGaleria">
+		<div id="menuFiltro" class="wrapper">
+			Galería
+			<ul>
+				<li class="active"><a href="#" data-filter="all">Todo</a></li>
+				<li><a href="#" data-filter="albums">Albumes</a></li>
+				<li><a href="#" data-filter="videos">Videos</a></li>
+			</ul>
+		</div>
+	</section>
 		<section id="galerialista" class="galeria">
 			<div class="busquedabox">
-				<a class="back-link" href="{% url 'homepageindex' %}">«Volver</a>
 				<form action="#galerialista" method="POST">	{% csrf_token %}
 					<input class="textbuscar" type="text" name="busqueda">
 					<input class="botonbuscar"type="submit" value="Buscar">
 				</form>
 			</div>
+
 			<div class="lista">
 				{% regroup lista_galeria by creado_en|date:"F Y" as lista_por_mes %} 
 				{% for mes in lista_por_mes %}
 				<div class="mesGrouper">{{ mes.grouper }}</div>
+				<div class="wrapper">
 					{% for galeria in mes.list %}
 						{% if galeria.es_video %}
-							<a class="itemGaleria" href="{{galeria.get_absolute_url}}">
+							<a class="itemGaleria videos" href="{{galeria.get_absolute_url}}">
 								<div class="video">
-									<div class="tituloVideo">></div>
+									<div class="playIcon"></div>
 									<img class="lazy" src="{% static 'img/grey.gif' %}" data-original="{{galeria.enlace_video|youthumbnail:'l'}}" alt="{{galeria.titulo}}">
 								</div>
-								<div class="titulo">galeria.titulo</div>
+								<div class="titulo"><span>{{galeria.titulo}}</span></div>
 							</a>
 						{% else %}
-							<a class="itemGaleria" href="{{galeria.get_absolute_url}}">
+							<a class="itemGaleria albums" href="{{galeria.get_absolute_url}}">
 								<div class="album">
 									<div class="numeroFotos">{{ galeria.imagenes.count }}</div>
 									{% with galeria.imagenes.all|first as image %}
 										<img class="lazy" src="{% static 'img/grey.gif' %}" data-original="{{ MEDIA_URL }}/{{ image.imagen }}" alt="{{galeria.titulo}}">
 									{% endwith %}
 								</div>
-								<div class="titulo">{{galeria.titulo}}</div>			
+								<div class="titulo"><span>{{galeria.titulo}}</span></div>			
 							</a>
 						{% endif %}
-					{% endfor %}
+					{% endfor %}					
+				</div>
 				{% endfor %}
 			</div>
 		</section>
-	</div>
-</section>
 <!-- BACK TOP BOX -->
 <div id="back-top" class="back-top">
 	<a href="#home"><span>↑</span>Regresar arriba</a>
 </div>
+<script async src="{% static 'js/propios/filterData.js' %}"></script>
 <script>
 	$("img.lazy").lazyload();
 </script>

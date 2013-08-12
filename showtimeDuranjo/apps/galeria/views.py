@@ -14,35 +14,16 @@ def video(request, titulo):
 	return render_to_response('galeria/video.html', ctx, context_instance=RequestContext(request))
 
 
-def album(request, template='galeria/album.html', page_template='galeria/album_imagenes.html', titulo=None):
-	palabra_busqueda = request.POST.get('busqueda', '')
-	mensaje = ''
+def album(request, titulo):
 	titulo = titulo.replace('_', ' ')
-	album = Album.objects.get(titulo=titulo)
-	imagenes = ImgAlbum.objects.filter(album__in=album)
-	if request.is_ajax():
-		template = page_template
-	if (palabra_busqueda):
-		albumes = Album.objects.filter(titulo__icontains=palabra_busqueda)
-		if not (albumes):
-			mensaje = "No se han encontrado resuldos para "+palabra_busqueda
-	ctx = {
-		'page_template': page_template,
-		'imagenes': imagenes,
-		'mensaje': mensaje
-	}
-	return render_to_response(template, ctx, context_instance=RequestContext(request))
+	album = get_object_or_404(Album, titulo=titulo)
+	imagenes = ImgAlbum.objects.filter(album=album)
+	ctx = {'album': album, 'imagenes': imagenes}
+	return render_to_response('galeria/album.html', ctx, context_instance=RequestContext(request))
 
 
 def galeria(request, template='galeria/galeria.html', page_template='galeria/galeria_lista.html'):
-	lista_galeria = sorted(chain(Album.objects.all(), Video.objects.all()), key=attrgetter('creado_en'))
-	for li in lista_galeria:
-		print li
-		print "PRUEBA: "+li.titulo
-		if li.es_video:
-			print " ¿Es video?  SI"
-		else:
-			print " ¿Es video? NO"
+	lista_galeria = sorted(chain(Album.objects.all(), Video.objects.all()), key=attrgetter('creado_en'), reverse=True)
 	ctx = {'lista_galeria': lista_galeria , 'page_template': page_template}
 	if request.is_ajax():
 		template = page_template	

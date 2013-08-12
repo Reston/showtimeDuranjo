@@ -16,7 +16,7 @@ class Video(models.Model):
 
 	def get_absolute_url(self):
 		titulo = self.titulo.replace(' ', '_')
-		return reverse('Video', kwargs={'titulo': titulo})
+		return reverse('galeriavideo', kwargs={'titulo': titulo})
 
 
 class Album(models.Model):
@@ -31,7 +31,7 @@ class Album(models.Model):
 
 	def get_absolute_url(self):
 		titulo = self.titulo.replace(' ', '_')
-		return reverse('album', kwargs={'titulo': titulo})
+		return reverse('galeriaalbum', kwargs={'titulo': titulo})
 
 
 class ImgAlbum(models.Model):
