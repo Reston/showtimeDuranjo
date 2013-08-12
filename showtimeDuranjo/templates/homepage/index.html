@@ -36,26 +36,13 @@ Show Time - Inicio
 	<div class="wrapper">
 		<div class="ultimasNoticias">
 			<h2 class="titulo"><div class="estrella estrellapos1"></div>Ultimas Noticias</h2>
+			{% for item in entradas %}
 			<article>
-				<img src="{% static 'img/showimg4.jpg' %}" alt="articulo">
-				<div class="tituloNoticia">Titulo de la noticia.</div>
+				<img src="{{ MEDIA_URL }}{{item.image}}" width ="265" height="176" alt="{{ item.title }}">
+				<div class="tituloNoticia">{{ item.title }}</div>
 				<p>Mattis nunc, in enim et cras! Elementum lundium adipiscing aenean. A in a amet a, velit rhoncus sit augue aliquet.</p>
 			</article>
-			<article>
-				<img src="{% static 'img/showimg4.jpg' %}" alt="articulo">
-				<div class="tituloNoticia">Titulo de la noticia.</div>
-				<p>Mattis nunc, in enim et cras! Elementum lundium adipiscing aenean. A in a amet a, velit rhoncus sit augue aliquet.</p>
-			</article>
-			<article>
-				<img src="{% static 'img/showimg4.jpg' %}" alt="articulo">
-				<div class="tituloNoticia">Titulo de la noticia.</div>
-				<p>Mattis nunc, in enim et cras! Elementum lundium adipiscing aenean. A in a amet a, velit rhoncus sit augue aliquet.</p>
-			</article>
-			<article>
-				<img src="{% static 'img/showimg4.jpg' %}" alt="articulo">
-				<div class="tituloNoticia">Titulo de la noticia.</div>
-				<p>Mattis nunc, in enim et cras! Elementum lundium adipiscing aenean. A in a amet a, velit rhoncus sit augue aliquet.</p>
-			</article>
+			{%  endfor %}
 		</div>
 		<div class="sinopsis">
 			<div class="info">

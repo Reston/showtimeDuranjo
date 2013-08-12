@@ -5,10 +5,14 @@ from django.template import RequestContext
 from django.core.mail import send_mail
 from showtimeDuranjo.apps.homepage.forms import *
 from showtimeDuranjo.apps.homepage.models import Galeria
+from zinnia.models import Entry
 
 
 def index(request):
-	return render_to_response('homepage/index.html', context_instance=RequestContext(request))
+	entradas= Entry.objects.order_by('-creation_date')
+	entradas= entradas[:4]
+	ctx = {'entradas':entradas}
+	return render_to_response('homepage/index.html', ctx, context_instance=RequestContext(request))
 
 def contacto(request):
 	success = False
