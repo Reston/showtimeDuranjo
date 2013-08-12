@@ -56,6 +56,11 @@ h1{
 	height: 64px;
 	z-index: 1;
 }
+.textonoticia{
+	height: 73px;
+	overflow: hidden;
+}
+
 .ultimasNoticias article{
 	display: inline-block;
 	vertical-align: top;

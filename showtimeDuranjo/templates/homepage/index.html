@@ -40,7 +40,11 @@ Show Time - Inicio
 			<article>
 				<img src="{{ MEDIA_URL }}{{item.image}}" width ="265" height="176" alt="{{ item.title }}">
 				<div class="tituloNoticia">{{ item.title }}</div>
-				<p>Mattis nunc, in enim et cras! Elementum lundium adipiscing aenean. A in a amet a, velit rhoncus sit augue aliquet.</p>
+				<div class="textonoticia">
+					{% autoescape off %}
+						<p>{{item.html_content}}</p>
+					{% endautoescape %}	
+				</div>
 			</article>
 			{%  endfor %}
 		</div>
