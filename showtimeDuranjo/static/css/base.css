@@ -218,7 +218,7 @@ footer{
 	font: 11px/100% Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
-	color: black;
+	color: white;
 
 	/* transition */
 	-webkit-transition: 1s;
@@ -226,7 +226,7 @@ footer{
 	transition: 1s;
 }
 .back-top a:hover {
-	color: #000;
+	color: white;
 }
 
 	/* arrow icon (span tag) */

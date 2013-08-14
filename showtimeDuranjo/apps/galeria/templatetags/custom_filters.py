@@ -32,7 +32,7 @@ def youtube_embed_url(value):
 	match = re.search(r'^(http|https)\:\/\/www\.youtube\.com\/watch\?v\=(\w*)(\&(.*))?$', value)
 	if match:
 		embed_url = 'http://www.youtube.com/embed/%s' %(match.group(2))
-		res = "<iframe width=\"560\" height=\"315\" src=\"%s\" frameborder=\"0\" allowfullscreen></iframe>" %(embed_url)
+		res = "<iframe width=\"1280\" height=\"750\" src=\"%s\" frameborder=\"0\" allowfullscreen></iframe>" %(embed_url)
 		return res
 	return 'Enlace de video invalido.'
 

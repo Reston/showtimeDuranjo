@@ -1,0 +1,43 @@
+@charset 'utf-8';
+.tituloVideo {
+	text-align: center;
+	font-size: 4em;
+	padding: 35px 0;
+}
+.componente{
+	width: 60%;
+	margin: 0 auto;
+}
+.datos{
+	text-align: center;
+	margin: 15px 0;
+	font-size: 1.2em;
+}
+.regresar a{
+	text-decoration: none;
+	color: #1C697F;
+	font-size: 1.3em;
+}
+.regresar{
+	position: relative;
+}
+.regresar:after{
+	position: absolute;
+	content: "";
+	left: -18px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 15px 10px 0;
+	border-color: transparent #007bff transparent transparent;
+}
+.regresar:before{
+	position: absolute;
+	content: "";
+	left: -35px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 15px 10px 0;
+	border-color: transparent #AA4792 transparent transparent;
+}

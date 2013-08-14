@@ -2,17 +2,39 @@
 {% load url from future %}
 {% load staticfiles %}
 {% load custom_filters %}
+{% block css%}
+	{{ block.super }}
+	<link rel="stylesheet" href="{% static 'css/galeria/album.css' %}">
+{% endblock %}
+{% block js %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="{% static 'js/adquiridos/jquery.lazyload.js' %}"></script>
+{% endblock js%}
 {% block contenido %}
 <section class="menuGaleria">
 		<div class="wrapper">
-			{{album.titulo}}
+			<div class="tituloAlbum">{{album.titulo}}</div> 
 		</div>
 	</section>
 <section id="galerialista" class="galeria">
 	<div class="wrapper">
-		{% for imagen in imagenes %}
-		<img src="{{ MEDIA_URL }}/{{imagen.imagen}}" alt="{{album.titulo}}">
-		{% endfor %}
+		<div class="regresar"><a href="{% url 'galeriagaleria' %}">Regresar</a></div>
+		<div class="redesSociales">
+			<div class="addthis_toolbox addthis_default_style">
+				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+				<a class="addthis_button_tweet"></a>
+				<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+				<a class="addthis_button_linkedin_counter"></a>
+				<a class="addthis_counter addthis_pill_style"></a>
+			</div>
+		</div>
+		<div class="listaImagenes">
+			{% for imagen in imagenes %}
+			<img src="{{ MEDIA_URL }}/{{imagen.imagen}}" alt="{{album.titulo}}">
+			{% endfor %}
+		</div>
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+		<!-- AddThis Button BEGIN -->
 	</div>
 </section>
 {% endblock contenido %}

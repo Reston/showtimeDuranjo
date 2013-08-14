@@ -2,8 +2,67 @@
 {% load url from future %}
 {% load staticfiles %}
 {% load custom_filters %}
+{% block css%}
+	{{ block.super }}
+	<link rel="stylesheet" href="{% static 'css/galeria/video.css' %}">
+{% endblock %}
+{% block js %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+{% endblock js %}
 {% block contenido %}
-<div>
-{{ video.enlace_video|youtube_embed_url|safe }}
+<div class="wrapper">
+	<div class="tituloVideo">{{ video.titulo }}</div>
+	<div class="regresar"><a href="{% url 'galeriagaleria' %}">Regresar</a></div>
+	<div class="video">
+		<div class="componente">{{ video.enlace_video|youtube_embed_url|safe }}</div>
+	</div>
+	<div class="datos">
+		<div class="fecha">{{video.modificado_en}}</div>
+		<div class="descripcion">{{video.breve_descripcion}}</div>
+	</div>
 </div>
+<script>
+	// By Chris Coyier & tweaked by Mathias Bynens
+
+$(function() {
+
+	// Find all YouTube videos
+	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
+
+	    // The element that is fluid width
+	    $fluidEl = $(".componente");
+
+	// Figure out and save aspect ratio for each video
+	$allVideos.each(function() {
+
+		$(this)
+			.data('aspectRatio', this.height / this.width)
+			
+			// and remove the hard coded width/height
+			.removeAttr('height')
+			.removeAttr('width');
+
+	});
+
+	// When the window is resized
+	// (You'll probably want to debounce this)
+	$(window).resize(function() {
+
+		var newWidth = $fluidEl.width();
+		
+		// Resize all videos according to their own aspect ratio
+		$allVideos.each(function() {
+
+			var $el = $(this);
+			$el
+				.width(newWidth)
+				.height(newWidth * $el.data('aspectRatio'));
+
+		});
+
+	// Kick off one resize to fix all videos on page load
+	}).resize();
+
+});
+</script>
 {% endblock contenido %}
