@@ -6,11 +6,15 @@ from django.core.mail import send_mail
 from showtimeDuranjo.apps.homepage.forms import *
 from showtimeDuranjo.apps.homepage.models import Galeria
 from zinnia.models import Entry
+import nltk
 
 
 def index(request):
 	entradas= Entry.objects.order_by('-creation_date')
 	entradas= entradas[:4]
+	for ent in entradas:
+		quitar_html= nltk.clean_html(ent.content) 
+		ent.content =  quitar_html[:65]
 	ctx = {'entradas':entradas}
 	return render_to_response('homepage/index.html', ctx, context_instance=RequestContext(request))
 

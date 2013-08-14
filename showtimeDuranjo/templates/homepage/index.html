@@ -42,11 +42,12 @@ Show Time - Inicio
 				<div class="tituloNoticia">{{ item.title }}</div>
 				<div class="textonoticia">
 					{% autoescape off %}
-						<p>{{item.html_content}}</p>
+						<p>{{item.content}}...</p>
 					{% endautoescape %}	
 				</div>
 			</article>
 			{%  endfor %}
+			<a href="/weblog"class="vertodas"> Ver todas las noticias </a>
 		</div>
 		<div class="sinopsis">
 			<div class="info">

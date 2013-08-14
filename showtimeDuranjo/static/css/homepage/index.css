@@ -83,3 +83,14 @@ h1{
 .twitter{
 	text-align: center;
 }
+
+.vertodas{
+	display: block;
+	text-decoration: none;
+	color: #FFF;
+	background-color: #483E4B;
+	width: 171px;
+	margin: 27px 0 0 11px;
+	text-align: center;
+	padding: 5px;
+}
