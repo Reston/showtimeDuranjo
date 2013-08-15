@@ -171,6 +171,9 @@ footer{
 	width: 70%;
 	margin: 0 auto;
 }
+footer{
+	text-align: center;
+	}
 /* Configuración pagination */
 .endless_page_template{
 	margin-bottom: 150px;
@@ -270,5 +273,59 @@ footer{
 		background:none;
 	}
 	/* END CONFIG back-to-top */
+	.wrapper{
+		width: 100%;
+	}
+	.logomenu{
+		left: 0;
+	}
+	.barraNavegacion{
+		margin-left: 0;
+	}
+	.nav a{
+		width: auto;
+		margin-right: 10px;
+	}
+	.effect{
+		display: none;
+	}
+}
 
+@media screen and (max-width: 950px){
+	.footer-med{
+		width: 100%;
+	}
+	.footer-izq, .footer-der{
+		width: 100%;
+		text-align: center;
+	}
+	.footer-izq{
+		margin-top: 50px;
+	}
+
+}
+
+@media screen and (max-width: 650px) {
+	.logomenu{
+		position: static;
+		text-align: center;
+	}
+	.nav{
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.barraNavegacion{
+		height: auto;
+	}
+	.nav a{
+		width: 100%;
+		background: #8515B3;
+		border-bottom: 2px solid #FFF;
+		padding: 15px 0;
+	}
+	.galeria > .wrapper{
+		display: none;
+	}
 }

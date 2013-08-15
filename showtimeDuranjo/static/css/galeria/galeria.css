@@ -113,3 +113,28 @@
 	border: none;
 	color: whitesmoke;
 }
+
+
+
+@media screen and (max-width: 950px){
+	.itemGaleria{
+		width: 45%;
+	}
+	.mesGrouper{
+		width: 25%;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.menuGaleria{
+		font-size: 1.5em;
+	}
+	.itemGaleria{
+		width: 95%;
+	}
+	.mesGrouper {
+		width: 45%;
+		margin-bottom: 40px;
+		margin-top: 50px
+	}
+}

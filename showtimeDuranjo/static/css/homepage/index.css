@@ -94,3 +94,26 @@ h1{
 	text-align: center;
 	padding: 5px;
 }
+
+@media screen and (max-width: 950px){
+	.ultimasNoticias, .sinopsis{
+		width: 100%;
+	}
+	.titulo{
+		text-align: center;
+	}
+
+}
+
+@media screen and (max-width: 450px) {
+	.ultimasNoticias article{
+		width: 100%;
+	}
+	.estrella{
+		display: none;
+	}
+
+	.sinopsis p{
+		padding: 10px;
+	}
+}

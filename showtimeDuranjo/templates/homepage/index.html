@@ -14,6 +14,7 @@ Show Time - Inicio
 {% block js %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+<script src="{% static 'js/adquiridos/jquery.lazyload.js' %}"></script>
 {% endblock js %}
 {% block contenido %}
 <h1>Show time, Programa de televisión y radio del Zulia.</h1>
@@ -65,10 +66,10 @@ Show Time - Inicio
 </section>
 	<!-- SLIDER INIT -->
 	<script>
-		$(document).ready(function() {
-		  $('.flexslider').flexslider({
-		  	animation: "slide"
-		  });
-		});
+			$(document).ready(function() {
+			  $('.flexslider').flexslider({
+			  	animation: "slide"
+			  });
+			});
 	</script>
 {% endblock contenido %}

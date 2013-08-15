@@ -40,3 +40,19 @@
 	margin-bottom: 20px;
 	margin-left: 25%;
 }
+
+@media screen and (max-width: 1200px){
+	.listaImagenes img{
+		width: auto;
+		max-width: 100%;
+	}
+	.regresar a{
+		margin-left: 40px;
+	}
+	.regresar:before{
+		left: 0;
+	}
+	.regresar:after{
+		left: 18px;
+	}
+}
