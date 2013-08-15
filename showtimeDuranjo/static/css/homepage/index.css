@@ -12,6 +12,14 @@ h1{
 	-o-background-size: cover;
 	background-size: cover;
 }
+
+.flexslider {
+	background: #FFF url(../../img/loader.gif) no-repeat center center !important;
+	overflow: hidden;
+	height: auto;
+	margin: 0 !important;
+	border: none !important;
+}
 /*fin galeria*/
 .lineaGradiente{
 	background: #462d86; /* Old browsers */
@@ -24,6 +32,8 @@ h1{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#462d86', endColorstr='#462d86',GradientType=1 ); /* IE6-9 */
 	height: 10px;
 }
+
+
 /* Ultimas noticias y sinopsis con twitter*/
 
 .ultimasNoticiasSinopsis{
@@ -112,7 +122,6 @@ h1{
 	.estrella{
 		display: none;
 	}
-
 	.sinopsis p{
 		padding: 10px;
 	}
