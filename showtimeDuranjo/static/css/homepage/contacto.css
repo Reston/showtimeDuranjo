@@ -141,3 +141,39 @@ input[type="submit"]{
 	border-top: 1px solid #808080;
 	width: 80%;
 }
+
+@media screen and (max-width: 1200px){
+	.contacto{
+		padding-bottom: 10px; 
+	}
+	.contacto .titulo, .tituloContacto{
+		margin-left: 20%;
+	}
+	.sectionContacto{
+		width: 80%;
+		margin-left: 20%;
+	}
+	form{
+		width: 100%;
+	}
+	form .sectionContacto {
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	form .sectionContacto {
+		width: 98%;
+	}
+	.sectionContacto{
+		width: 98%;
+		margin-left: 1%;
+	}
+	.campo label {
+		width: 300px;
+	}
+
+	.campo input, textarea{
+		margin-left: 5%;
+	}
+}

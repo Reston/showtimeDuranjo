@@ -324,5 +324,9 @@ footer{
 		background: #8515B3;
 		border-bottom: 2px solid #FFF;
 		padding: 15px 0;
+		margin-right: 0;
+	}
+	.ultimasNoticias article{
+		padding: 0;
 	}
 }

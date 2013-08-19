@@ -110,6 +110,7 @@ h1{
 @media screen and (max-width: 450px) {
 	.ultimasNoticias article{
 		width: 100%;
+		padding: 0;
 	}
 	.estrella{
 		display: none;
