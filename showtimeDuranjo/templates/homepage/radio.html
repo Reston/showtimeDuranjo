@@ -18,32 +18,9 @@ Show Time - Radio
 <script src="{% static 'js/propios/toChangeImage.js' %}"></script>
 <script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
 {% endblock %}
-{% block navi %}
-<div class="wrapper">
-			<div class="logo">
-				<img src="{% static 'img/logoshowtime.png' %}" alt="Logo de Con Buen Pie">
-			</div>
-	</div>
-<nav class="barraNavegacion">
-		<ul>
-			<li id="homeMenu" class="index"><a href="{% url 'homepageindex' %}">Inicio</a></li>
-			<li id="transmisionMenu" class="services"><a href="#transmision">Transmisión</a></li>
-			<li id="galeriaMenu" class="services"><a href="#galeria">Galería</a></li>
-		</ul>
-</nav>			
-{% endblock %}
 {% block clear %}{% endblock%}
 {% block contenido %}
 <!--  GRAMA -->
-	<section class="grama">
-		<div class="rayagris"></div>
-		<div class="wrapper">
-			<div class="presentadores"></div>
-			<div class="tituloPrincipal">
-				<h1>Escuchanos por Feria 106.9 FM</h1>
-			</div>
-		</div>
-	</section>
 	<section id="transmision" class="transmision">
 		<div class="wrapper">
 			<p>En vivo de Lunes a Viernes de 10:00 AM a 11:00 AM.</p>
