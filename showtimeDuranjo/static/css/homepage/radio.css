@@ -2,16 +2,6 @@
 
 
 /* HEADER */
-#midground {
-	background: url(../../img/midground.png) repeat 20% 20%;
-	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
-}
-#foreground {
-	background: url(../../img/foreground.png) repeat 90% 110%;
-	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
-}
 header{
 	background: url(../../img/background.png) repeat 5% 5%;
 	display: inline-block;
@@ -185,4 +175,40 @@ nav ul li a{
 	max-width: 634px;
 	max-height: 473px;
 	vertical-align: middle;
+}
+@media screen and (min-width: 950px){
+	#midground {
+		background: url(../../img/midground.png) repeat 20% 20%;
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+	}
+	#foreground {
+		background: url(../../img/foreground.png) repeat 90% 110%;
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+	}
+}
+@media screen and (max-width: 1100px){
+	.aboutus .info{
+		width: auto;
+	}
+}
+@media screen and (max-width: 950px){
+	.reproducto{
+		display: none;
+	}
+	.transmision p{
+		padding: 1em;
+	}
+}
+@media screen and (max-width: 700px) {
+	.imagenGrande{
+		padding: 0;
+		width: auto;
+		height: auto;
+	}
+	.aboutus .galeria{
+		width: 100%;
+	}
+
 }
