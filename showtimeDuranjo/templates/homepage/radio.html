@@ -19,6 +19,23 @@ Show Time - Radio
 <script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
 {% endblock %}
 {% block clear %}{% endblock%}
+{% block navi %}
+	<nav class="ph-line-nav nav">
+		<div class="wrapper">
+			<div class="logomenu">
+					<img src="{% static 'img/logoradio.png' %}" alt="Logo de radio showtime">
+			</div>
+			<div class="barraNavegacion">
+				<a href="{% url 'homepageindex' %}">Inicio</a>
+				<a href="{% url 'galeriagaleria' %}">Galería</a>
+				<a href="{% url 'homepageradio' %}">Radio</a>
+				<a href="/weblog">Noticias</a>
+				<a href="{% url 'homepagecontacto' %}">Contacto</a>
+				<div class="effect"></div>
+			</div>
+		</div>
+	</nav>
+{% endblock%}
 {% block contenido %}
 <!--  GRAMA -->
 	<section id="transmision" class="transmision">
