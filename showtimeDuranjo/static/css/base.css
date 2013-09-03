@@ -150,7 +150,8 @@ footer{
 	width: 59%;
 }
 .footer-izq{
-	text-align: right;
+	margin-top: 20px;
+	vertical-align: bottom;
 }
 .listaMenuFooter{
 	padding: 0;

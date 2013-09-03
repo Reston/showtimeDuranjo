@@ -11,6 +11,7 @@ h1{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	overflow: hidden;
 }
 /*fin galeria*/
 .lineaGradiente{
@@ -92,15 +93,18 @@ h1{
 	color: #FFF;
 	background-color: #483E4B;
 	width: 171px;
-	margin: 27px 0 0 11px;
+	margin: 27px auto 0 auto;
 	text-align: center;
 	padding: 5px;
 }
 
 @media screen and (max-width: 950px){
 	.ultimasNoticias, .sinopsis{
-		width: 100%;
-	}
+		width: 97%;
+		padding: 0 5px;
+	
+		text-align: center;
+}
 	.titulo{
 		text-align: center;
 	}
