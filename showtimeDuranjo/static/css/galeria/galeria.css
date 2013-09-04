@@ -5,8 +5,11 @@
 .menuGaleria{
 	padding-top: 50px;
 	text-align: center;
-	font-size: 2em;
+	font-size: 1.5em;
 	text-transform: uppercase;
+}
+.tituloGaleria {
+	font-size: 2rem;
 }
 .menuGaleria ul li{
 	display: inline-block;
