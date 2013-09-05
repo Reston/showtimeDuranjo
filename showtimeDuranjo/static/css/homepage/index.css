@@ -51,9 +51,14 @@ h1{
 	height: 64px;
 	z-index: 1;
 }
+.info{
+	width: 89%;
+margin-left: 33px;
+padding-bottom: 12px;
+}
 .estrellapos2{
 	top: 0;
-	left: 87px;
+	left: 128px;
 	background-position: -134px -17px;
 	width: 75px;
 	height: 64px;
@@ -110,7 +115,6 @@ h1{
 	.titulo{
 		text-align: center;
 	}
-
 }
 
 @media screen and (max-width: 450px) {
@@ -118,6 +122,7 @@ h1{
 		width: 100%;
 		padding: 0;
 	}
+
 	.estrella{
 		display: none;
 	}
