@@ -8,8 +8,9 @@
 	text-align: center;
 }
 .listaImagenes img{
-	margin: 0 auto;
+	margin: 0 auto 20px auto;
 	display: block;
+	border: 2px solid #FFF;
 }
 .regresar a{
 	text-decoration: none;
