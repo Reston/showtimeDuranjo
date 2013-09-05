@@ -24,23 +24,13 @@
 {% endblock %}
 </head>
 <body>
-	<!-- Analytics SCRIPT GOOGLE! -->
-	<!--<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	  //Se debe cambiar esto cuando se haga X página.
-	  ga('create', 'UA-*********-1', '*******.com');
-	  ga('send', 'pageview');
-	</script> -->
 <header id="home" class="cabecera">	
 	<div class="wrapper">
 		<div class="redeSociales">
 			<a href="https://twitter.com/showtimemcbo"><div class="twitterlogo"></div></a>
 			<a href="https://facebook.com/showtimemcbo"><div class="facebook"></div></a>
 			<a href="https://plus.google.com/101327765584320539080"><div class="googleplus"></div></a>
-			<a href="http://instagram.com/showtimenews"><div class="instagram"></div></a>
+			<a href="https://instagram.com/showtimenews"><div class="instagram"></div></a>
 		</div>
 	</div>
 	{% block navi %}
@@ -99,5 +89,19 @@
 			Copyright © 2013, Todos los derechos reservados.
 		{% endblock%}
 	</footer>
+<!-- Analytics SCRIPT GOOGLE! -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-43821103-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 </body>
 </html>
