@@ -7,6 +7,10 @@
 .listaImagenes{
 	text-align: center;
 }
+.listaImagenes img{
+	margin: 0 auto;
+	display: block;
+}
 .regresar a{
 	text-decoration: none;
 	color: #1C697F;
