@@ -117,8 +117,6 @@
 	color: whitesmoke;
 }
 
-
-
 @media screen and (max-width: 950px){
 	.itemGaleria{
 		width: 45%;
@@ -139,5 +137,11 @@
 		width: 45%;
 		margin-bottom: 40px;
 		margin-top: 50px
+	}
+	.galleria-stage{
+		width: 100%;
+	}
+	.galeriabox{
+		width: 100%;
 	}
 }

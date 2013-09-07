@@ -5,10 +5,13 @@
 {% block css%}
 	{{ block.super }}
 	<link rel="stylesheet" href="{% static 'css/galeria/album.css' %}">
-{% endblock %}
+	<link rel="stylesheet" href="{% static 'css/galeria/galleria.classic.css' %}">	
+	{% endblock %}
 {% block js %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="{% static 'js/adquiridos/jquery.lazyload.js' %}"></script>
+<script src="{% static 'js/adquiridos/galleria-1.2.9.min.js' %}"></script>
+<script src="{% static 'js/adquiridos/galleria.classic.min.js' %}"></script>
 {% endblock js%}
 {% block contenido %}
 <section class="menuGaleria">
@@ -28,13 +31,33 @@
 				<a class="addthis_counter addthis_pill_style"></a>
 			</div>
 		</div>
-		<div class="listaImagenes">
+	<div class="galeriabox">	
+		<div id="galleria">
 			{% for imagen in imagenes %}
-			<img src="{{ MEDIA_URL }}/{{imagen.imagen}}" alt="{{album.titulo}}">
+			   <a href="{{ MEDIA_URL }}/{{imagen.imagen}}"><img src="{{ MEDIA_URL }}/{{imagen.imagen}}" data-title="showtime"></a>
 			{% endfor %}
 		</div>
+	</div>
+		<script>
+   			 Galleria.loadTheme("{% static 'js/adquiridos/galleria.classic.min.js' %}");
+    		Galleria.run('#galleria', {
+  				height: parseInt($('#galleria').css('height')),
+  				wait: true,
+  				responsive: true
+ 			});
+		</script>
+
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
 		<!-- AddThis Button BEGIN -->
 	</div>
 </section>
+
+	<!-- GALERIA SCRIPT -->
+	<script type="text/javascript">
+$('#galleria').galleria({
+height: 500, //--I made heights match
+wait:true
+});
+</script>
+
 {% endblock contenido %}
