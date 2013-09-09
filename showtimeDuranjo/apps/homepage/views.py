@@ -27,7 +27,7 @@ def contacto(request):
 			cd = form.cleaned_data
 			asunto = u'Por: %s mail: %s' % (cd['nombre'], cd['email'])
 			content = u'Email contacto: %s \nAsunto: %s \nTelefono: %s \nDescripcion: %s' % (cd['email'], asunto, cd['telefono'], cd['texto'])
-			send_mail(asunto, content, 'info@duranjo.com', ['info@duranjo.com'])
+			send_mail(asunto, content, 'contacto@showtimenews.com.ve', ['contacto@showtimenews.com.ve'])
 	else:
 		form = contactForm()
 	ctx = {'form': form, 'success': success}
