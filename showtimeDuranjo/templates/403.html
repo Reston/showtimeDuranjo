@@ -1,0 +1,15 @@
+{% extends "homepage/index.html" %} 	
+{% load staticfiles %}
+{% block title %}Página con acceso denegado{% endblock %}
+{% block css%}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" href="{% static 'css/homepage/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/500and404.css' %}">
+{% endblock%}
+{% block contenido %}
+<section class="fondoerror">
+	<div class="error403">
+		<img src="{% static 'img/error403.png' %}" alt="acceso denegado por el servidor en showtimenews.">
+	</div>
+</section>
+{% endblock %}
