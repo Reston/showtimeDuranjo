@@ -38,6 +38,7 @@ Show Time - Inicio
 			<h2 class="titulo"><div class="estrella estrellapos1"></div>Ultimas Noticias</h2>
 			{% for item in entradas %}
 			<article>
+			<a href="{{ item.get_absolute_url }}">
 				<img src="{{ MEDIA_URL }}{{item.image}}" width ="265" height="176" alt="{{ item.title }}">
 				<div class="tituloNoticia">{{ item.title }}</div>
 				<div class="textonoticia">
@@ -45,7 +46,8 @@ Show Time - Inicio
 						<p>{{item.content}}...</p>
 					{% endautoescape %}	
 				</div>
-			</article>
+			</a>
+		</article>
 			{%  endfor %}
 			<a href="/weblog"class="vertodas"> Ver todas las noticias </a>
 		</div>

@@ -39,6 +39,10 @@ h1{
 	width: 49%;
 	position: relative;
 }
+.ultimasNoticias a{
+	text-decoration: none;
+	color: white;
+}
 .estrella{
 	position: absolute;
 	background: url(../../img/estrellas.png) no-repeat;

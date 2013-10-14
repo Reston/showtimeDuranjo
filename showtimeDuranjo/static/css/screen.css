@@ -86,7 +86,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,su
 .zinnia .slider{width:100%;position:relative;background:url('../img/loader.gif?1325258640') no-repeat center center}
 .zinnia .slides:before,.zinnia .slides:after{content:" ";height:0;display:block;overflow:hidden}.zinnia .slides:after{clear:both}
 .zinnia .slide{display:none;position:relative}
-.zinnia .slide img{width:100%;display:block}
+.zinnia .slide img{width:0%;display:block}
 .zinnia .slide-content{left:0;right:0;bottom:0;position:absolute;padding:1em 2em}
 .zinnia .slide-content h2,.zinnia .slide-content p{text-shadow:1px 1px 0 #000000;background-color:rgba(0,0,0,0.7)}
 .zinnia .slide-content h2{padding:0.25em;font-weight:bold;display:inline-block}
